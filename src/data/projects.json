@@ -1,0 +1,19 @@
+
+[
+  {
+    "title": "Project One",
+    "description": "This is a brief description of Project One.",
+    "image": "/src/assets/np_manager.jpeg",
+    "github": "",
+    "demo": "",
+    "stack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Project Two",
+    "description": "This is a brief description of Project Two.",
+    "image": "/src/assets/journey.jpeg",
+    "github": "",
+    "demo": "",
+    "stack": ["React", "Node.js", "MongoDB"]
+  }
+]
