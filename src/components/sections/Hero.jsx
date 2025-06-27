@@ -1,5 +1,6 @@
 import React from 'react';
 import CodeSnippet from '../ui/Codesnippet';
+import Button from '../ui/Button';
 
 export default function Hero() {
     return (
@@ -13,22 +14,12 @@ export default function Hero() {
                         I'm passionate about writing maintainable code and delivering reliable software.
                     </p>
                     <div className="cta-buttons">
-                        <a href="#projects" className="btn btn-primary">View My Work</a>
-                        <a href="#contact" className="btn btn-secondary">Get In Touch</a>
+                        <Button className='btn-primary' to='#projects'>View My Work</Button>
+                        <Button className='btn-secondary' to='#contact'>Get In Touch</Button>
                     </div>
                 </header>
 
-                {/* <pre className="hero-visual fade-in code-preview" aria-label="Sample developer code block">
-                    {
-                        `// Welcome to my portfolio
-const developer = {
-  name: "May C",
-  skills: ["React", "Node.js", "Express", ... andMore],
-  passion: "Creating amazing web experiences"
-};
-
-console.log("Let's build something great!");`}
-                </pre> */}
+               
                 <CodeSnippet />
             </article>
 
