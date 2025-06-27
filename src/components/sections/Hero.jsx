@@ -1,4 +1,5 @@
 import React from 'react';
+import CodeSnippet from '../ui/Codesnippet';
 
 export default function Hero() {
     return (
@@ -17,7 +18,7 @@ export default function Hero() {
                     </div>
                 </header>
 
-                <pre className="hero-visual fade-in code-preview" aria-label="Sample developer code block">
+                {/* <pre className="hero-visual fade-in code-preview" aria-label="Sample developer code block">
                     {
                         `// Welcome to my portfolio
 const developer = {
@@ -27,7 +28,8 @@ const developer = {
 };
 
 console.log("Let's build something great!");`}
-                </pre>
+                </pre> */}
+                <CodeSnippet />
             </article>
 
             <span className="scroll-indicator" aria-hidden="true">↓</span>
