@@ -1,5 +1,7 @@
-import React from 'react';
 import '../../styles/global.css';
+
+const github = import.meta.env.PUBLIC_GITHUB_URL;
+const linkedin = import.meta.env.PUBLIC_LINKEDIN_URL;
 
 export default function ContactMe() {
     return (
@@ -14,8 +16,8 @@ export default function ContactMe() {
                     <p>📱 (608) 770 5802</p>
                     <p>📍 Dallas, TX</p>
                     <div className="contact-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">GitHub</a>
+                        <a href={linkedin} target="_blank">LinkedIn</a>
+                        <a href={github} target="_blank">GitHub</a>
                     </div>
                 </div>
                 <form className="contact-form" name="contact" method="POST" data-netlify="true">
