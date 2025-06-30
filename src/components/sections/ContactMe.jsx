@@ -16,10 +16,9 @@ export default function ContactMe() {
                     <div className="contact-links">
                         <a href="#">LinkedIn</a>
                         <a href="#">GitHub</a>
-                        <a href="#">Twitter</a>
                     </div>
                 </div>
-                <form className="contact-form">
+                <form className="contact-form" name="contact" method="POST" data-netlify="true">
                     <div className="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required/>
