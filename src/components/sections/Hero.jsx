@@ -18,6 +18,7 @@ export default function Hero() {
                         <Button className='btn-secondary' to='#contact'>Get In Touch</Button>
                     </div>
                 </header>
+                
 
                
                 <CodeSnippet />
