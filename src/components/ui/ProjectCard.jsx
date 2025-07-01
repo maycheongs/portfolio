@@ -6,14 +6,14 @@ export default function ProjectCard({ project }) {
             <img src={image} alt={title} className="project-image" />
 
             <div className="project-details">
-                <div>
+                <div className="project-content">
                     <h3>{title}</h3>
                     <p>{description}</p>
                 </div>
 
                 <div className="tech-stack">
                     <span>Tech Stack:</span>
-                    <span>{stack.map((s,i)=> i == stack.length - 1  ? s : `${s},`)}</span>
+                    <span>{stack.map((s,i)=> i == stack.length - 1  ? s : `${s}, `)}</span>
                 </div>
 
                 <div className="project-links">

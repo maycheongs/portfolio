@@ -1,19 +1,30 @@
-
 [
   {
-    "title": "Project One",
-    "description": "This is a brief description of Project One.",
+    "title": "Neopulse Manager",
+    "description": "This is a full-stack web platform that I worked on with one other developer for non-technical users to upload training data, customize parameters and train ML models using the company's ML API. It had a React-based frontend with drag-and-drop UI, using Websockets, internationalization (I18next), and remote deployment via SSH. ChartJS for visualization of the model iterations and results as they were trained and fetched. Node.js/ Express backend with passport.js for authentication and session management.",
     "image": "/images/np_manager.jpeg",
     "github": "",
-    "demo": "",
-    "stack": ["HTML", "CSS", "JavaScript"]
+    "demo": "https://aidynamics.com/platform/neopulse-ai-platform/neopulse-manager/",
+    "stack": [
+      "AWS EC2",
+      "React", "Redux",
+      "Node.js","MongoDB","Mongoose","Microservices","WebSockets","CSV Parsing","Axios", "Jest","Agile/SCRUM"
+    ]
   },
   {
-    "title": "Project Two",
-    "description": "This is a brief description of Project Two.",
+    "title": "Journey",
+    "description": "The last non-private project that I worked on, with 2 other developers, was a full-stack web platform for users to create and share their travel itineraries. It used the Triposo API (now defunct) to fetch information about activities, places of interest and accomodation, sockets.io for real-time collaboration and PostgreSQL for storing user data and itineraries. Included mobile-layout and print feature for on-the-go access",
     "image": "/images/journey.jpeg",
-    "github": "",
+    "github": "https://github.com/maycheongs/Journey",
     "demo": "",
-    "stack": ["React", "Node.js", "MongoDB"]
+    "stack": [
+      "React", "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "WebSockets",
+      "Axios", "Storybook"
+
+    ]
   }
 ]
