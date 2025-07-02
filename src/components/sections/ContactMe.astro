@@ -1,0 +1,45 @@
+---
+// @ts-nocheck
+import "../../styles/global.css";
+import ContactForm from "../ui/ContactForm.jsx";
+
+const github = import.meta.env.PUBLIC_GITHUB_URL;
+const linkedin = import.meta.env.PUBLIC_LINKEDIN_URL;
+---
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Drop A Message!</h3>
+                <p>
+                    I'm always interested in new opportunities and exciting
+                    projects. Whether you have a question, want to collaborate,
+                    or just want to say hello, I'd love to hear from you!
+                </p>
+                <p>📧 maycheongs@email.com</p>
+                <p>📱 (608) 770 5802</p>
+                <p>📍 Dallas, TX</p>
+                <div class="contact-links">
+                    <a href={linkedin} target="_blank">LinkedIn</a>
+                    <a href={github} target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Static form for Netlify detection -->
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <textarea name="message"></textarea>
+                <input name="bot-field" />
+            </form>
+
+            <!-- Contact Form Component placeholder -->
+            <div id="contact-form-container">
+                <!-- Your React ContactForm component will go here -->
+                 <ContactForm client:load />
+            </div>
+        </div>
+    </div>
+</section>
