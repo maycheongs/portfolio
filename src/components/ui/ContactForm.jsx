@@ -1,14 +1,37 @@
 import { useState } from 'react';
-import Button from '../ui/Button';
+import Button from './Button';
+import CustomAlert from './CustomAlert';
 
 export default function ContactForm() {
-
+    // State to manage form submission alert
+    const [alert, setAlert] = useState({
+        type: '',
+        message: '',
+        isVisible: false
+    });
+    // State to manage form data
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
         'bot-field': ''
     });
+
+    const showAlert = (type, message) => {
+        setAlert({
+            type,
+            message,
+            isVisible: true
+        });
+    }
+
+    const closeAlert = () => {
+        setAlert({
+            type: '',
+            message: '',
+            isVisible: false
+        });
+    }
 
     const resetForm = () => {
         setFormData({
@@ -40,20 +63,21 @@ export default function ContactForm() {
             });
 
             if (response.ok) {
-                alert('Thank you! Your message has been sent successfully.');
-                console.log('form data:', formData);
+                showAlert('info','Thank you for your message!');
                 // Reset the form after successful submission
                 resetForm();
             } else {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
-            alert('Sorry, there was an error sending your message. Please try again.');
+            showAlert('error','Sorry, there was an error sending your message. Please try again.');
         }
 
     }
 
     return (
+        <>
+        <CustomAlert onClose={closeAlert} timer={1000} {...alert}>{alert.message}</CustomAlert>
         <form onSubmit={handleSubmit} className="contact-form">
             <input name='bot-field' value={formData['bot-field']} onChange={onChange} hidden />
             <div className='form-group '>
@@ -98,6 +122,7 @@ export default function ContactForm() {
             <Button type="submit" className="btn-primary">Submit</Button>
 
         </form>
+        </>
     )
 
 }
