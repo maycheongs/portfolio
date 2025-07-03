@@ -78,7 +78,7 @@ export default function ContactForm() {
     return (
         <>
         <CustomAlert onClose={closeAlert} timer={1000} {...alert}>{alert.message}</CustomAlert>
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit} className="contact-form" name="contact" method="POST">
             <input name='bot-field' value={formData['bot-field']} onChange={onChange} hidden />
             <div className='form-group '>
                 <label htmlFor="name">Name</label>
