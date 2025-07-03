@@ -5,6 +5,8 @@ import ContactForm from "../ui/ContactForm.jsx";
 
 const github = import.meta.env.PUBLIC_GITHUB_URL;
 const linkedin = import.meta.env.PUBLIC_LINKEDIN_URL;
+const email = import.meta.env.PUBLIC_EMAIL;
+const phone = import.meta.env.PUBLIC_PHONE;
 ---
 
 <section id="contact" class="contact">
@@ -18,8 +20,8 @@ const linkedin = import.meta.env.PUBLIC_LINKEDIN_URL;
                     projects. Whether you have a question, want to collaborate,
                     or just want to say hello, I'd love to hear from you!
                 </p>
-                <p>📧 maycheongs@email.com</p>
-                <p>📱 (608) 770 5802</p>
+                <p>📧 {email}</p>
+                <p>📱 {phone}</p>
                 <p>📍 Dallas, TX</p>
                 <div class="contact-links">
                     <a href={linkedin} target="_blank">LinkedIn</a>
