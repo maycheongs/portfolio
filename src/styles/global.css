@@ -547,6 +547,7 @@ footer {
         text-align: center;
         gap: 2rem;
         padding: 1rem 1rem;
+        margin-top: 100px; /* Adjust for fixed nav */
     }
 
     .hero-text h1 {
@@ -563,11 +564,7 @@ footer {
     }
 
     .code-preview {
-        width: 100%;
-        max-width: 95vw;
-        padding: 1rem;
-        font-size: 0.8rem;
-        margin-top: 2rem;
+        display: none; /* Hide code preview on smaller screens */
     }
 
     /* About section */
