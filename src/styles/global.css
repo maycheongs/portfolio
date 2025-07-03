@@ -547,7 +547,6 @@ footer {
         text-align: center;
         gap: 2rem;
         padding: 1rem 1rem;
-        margin-top: 60px; /* Adjust for fixed nav */
     }
 
     .hero-text h1 {
