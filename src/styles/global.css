@@ -513,6 +513,25 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 400px) {
+    nav {
+        padding: 5px;
+    }
+    .nav-container .logo {
+        font-size: 1.2rem;
+    }
+    .hero-text h1 {
+        font-size: 1.7rem !important;
+        margin-bottom: 10px;
+    }
+    .hero-text .subtitle {
+        font-size: 1.2rem !important;
+        margin-bottom: 10px;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
 @media (max-width: 768px) {
 
     /* Navigation */
@@ -618,6 +637,13 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-content {
+        margin-top: 60px;
+        max-height: calc(100vh - 60px);
+    }
+    .cta-buttons a{
+        padding: 1rem 1.5rem;;
+    }
     .project-card {
         font-size: 0.9rem;
     }
