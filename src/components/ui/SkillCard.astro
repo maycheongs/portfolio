@@ -1,0 +1,14 @@
+---
+// Props interface
+interface Props {
+    title: string;
+    skills: string[];
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div class="skill-card">
+    <h3>{title}</h3>
+    <p>{skills.join(', ')}</p>
+</div>

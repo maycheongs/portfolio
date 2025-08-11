@@ -1,0 +1,33 @@
+---
+// Component script (frontmatter)
+import SkillCard from '../ui/SkillCard.astro';
+
+const skills = {
+    languages: ['JavaScript', 'HTML', 'Ruby', 'SQL', 'CSS'],
+    frameworks: ['React', 'Redux', 'Node.js', 'Express', 'WebSockets', 'Axios', 'GraphQL'],
+    databases: ['MongoDB', 'PostgreSQL'],
+    tools: ['Git', 'Bash/Shell scripting', 'AWS', 'REST APIs', 'Agile/Scrum']
+};
+---
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="container">
+        <div class="about-content">
+            <img src="/images/familypic.jpg" alt="Me and my family" class="about-image" />
+            <div class="about-text">
+                <p>Hi! I'm May, a full-stack web developer passionate about building user-focused experiences that truly solve problems. I believe great tech isn't just about looks — it's about making people's lives easier and more intuitive.</p>
+                
+                <p>Before jumping into web development, I worked in finance, where I discovered my love for coding through VBA and building tools that help teams work smarter. Now, I'm excited to bring that same problem-solving mindset to every project I work on.</p>
+                
+                <p>I live in Dallas, Texas with my family, and when I'm not coding, I enjoy spending time with them and playing video games.</p>
+            </div>
+        </div>
+        <div class="skills-grid">
+            <SkillCard title="Languages" skills={skills.languages} />
+            <SkillCard title="Frameworks" skills={skills.frameworks} />
+            <SkillCard title="Databases" skills={skills.databases} />
+            <SkillCard title="Tools & Practices" skills={skills.tools} />
+        </div>
+    </div>
+</section>
