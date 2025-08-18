@@ -1,0 +1,45 @@
+---
+const {
+    title,
+    description,
+    image,
+    stack,
+    linksCollection: links,
+} = Astro.props.project;
+---
+
+<div class="project-card">
+    {image?.url && <img src={image.url} alt={title} class="project-image" />}
+
+    <div class="project-details">
+        <div class="project-content">
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+
+        {
+            stack && stack.length > 0 && (
+                <div class="tech-stack">
+                    <span>Tech Stack:</span>
+                    <span>{stack.join(", ")}</span>
+                </div>
+            )
+        }
+
+        {
+            links?.items?.length > 0 && (
+                <div class="project-links">
+                    {links.items.map((link) => (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                </div>
+            )
+        }
+    </div>
+</div>
