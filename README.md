@@ -31,4 +31,4 @@ The project is actively being converted to TypeScript to improve code quality an
 The site is deployed on Netlify for automatic scaling and easy updates. Environment variables for Contentful are securely managed in Netlify’s dashboard.
 
 ## Contact
-Explore the live site at [https://maycheongs-portfolio.netlify.app](https://maycheong.netlify.app/). For inquiries or feedback, connect with me via [LinkedIn](www.linkedin.com/in/maycheongsl) or [email](mailto:maycheongs@gmail.com). Follow the project’s progress on [GitHub](https://github.com/maycheongs/portfolio).
+Explore the live site at [https://maycheong.netlify.app/](https://maycheong.netlify.app/). For inquiries or feedback, connect with me via [LinkedIn](www.linkedin.com/in/maycheongsl) or [email](mailto:maycheongs@gmail.com). Follow the project’s progress on [GitHub](https://github.com/maycheongs/portfolio).
