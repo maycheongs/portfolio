@@ -1,11 +1,10 @@
 ---
-const {
-    title,
-    description,
-    image,
-    stack,
-    linksCollection: links,
-} = Astro.props.project;
+import type { Project } from "@/generated/graphql";
+interface Props {
+    project: Project;
+}
+const { project } = Astro.props as Props;
+const { title, description, image, stack, linksCollection: links } = project;
 ---
 
 <div class="project-card">
@@ -27,19 +26,19 @@ const {
         }
 
         {
-            links?.items?.length > 0 && (
+            links?.items?.length ? (
                 <div class="project-links">
                     {links.items.map((link) => (
                         <a
-                            href={link.url}
+                            href={link?.url ?? "#"}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            {link.label}
+                            {link?.label ?? "Link"}
                         </a>
                     ))}
                 </div>
-            )
+            ) : null
         }
     </div>
 </div>
