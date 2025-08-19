@@ -10,8 +10,10 @@ interface FormData {
     'bot-field': string;
 }
 
+type AlertType = 'success' | 'error' | 'warning' | 'info';
+
 interface AlertState {
-    type: string;
+    type?: AlertType;
     message: string;
     isVisible: boolean;
 }
@@ -19,7 +21,7 @@ interface AlertState {
 export default function ContactForm() {
     // State to manage form submission alert
     const [alert, setAlert] = useState<AlertState>({
-        type: '',
+        type: 'info',
         message: '',
         isVisible: false
     });
@@ -31,7 +33,7 @@ export default function ContactForm() {
         'bot-field': ''
     });
 
-    const showAlert = (type: string, message: string) => {
+    const showAlert = (type: AlertType, message: string) => {
         setAlert({
             type,
             message,
@@ -41,7 +43,7 @@ export default function ContactForm() {
 
     const closeAlert = () => {
         setAlert({
-            type: '',
+            type: undefined,
             message: '',
             isVisible: false
         });
