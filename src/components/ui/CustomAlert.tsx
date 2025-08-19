@@ -1,11 +1,26 @@
-export default function CustomAlert({ type = 'info', isVisible, onClose, timer = 0, children, ...props }) {
-    if (!isVisible) return null;
-    if (Number.isInteger(+timer) && +timer > 0) {
-        setTimeout(onClose, +timer);
-    }
 
-    const getAlertStyle = () => {
-        const baseStyle = {
+import { useEffect } from 'react';
+
+type CustomAlertProps = {
+    type?: 'success' | 'error' | 'warning' | 'info';
+    isVisible: boolean;
+    onClose: () => void;
+    timer?: number; // in milliseconds, 0 means no auto close
+    children: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+
+export default function CustomAlert({ type = 'info', isVisible, onClose, timer = 0, children, ...props }: CustomAlertProps) {
+    if (!isVisible) return null;
+    useEffect(() => {
+        if (Number.isInteger(timer) && timer > 0) {
+            const id = setTimeout(onClose, timer);
+            return () => clearTimeout(id);
+        }
+    }, [timer, onClose]);
+
+    const getAlertStyle = (): React.CSSProperties => {
+        const baseStyle: React.CSSProperties = {
             position: 'fixed',
             top: '50vh',
             right: '50vw',
