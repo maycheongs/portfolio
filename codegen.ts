@@ -1,9 +1,11 @@
+/// <reference types="node" />
 
+import 'dotenv/config';
 import { generate } from '@graphql-codegen/cli';
 
 async function runCodegen() {
-    const spaceId = import.meta.env.CONTENTFUL_SPACE_ID;
-    const accessToken = import.meta.env.CONTENTFUL_ACCESS_TOKEN;
+    const spaceId = process.env.CONTENTFUL_SPACE_ID;
+    const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
     try {
         await generate(
             {
