@@ -1,5 +1,5 @@
 ---
-import { getProjects } from "../../../lib/contentful";
+import { getProjects } from "../../data/projects";
 import ProjectCard from "../ui/ProjectCard.astro";
 
 const projects = await getProjects();
@@ -8,10 +8,6 @@ const projects = await getProjects();
 <section id="projects" class="projects">
     <h2 class="section-title">Projects & Past Work</h2>
     <div class="projects-container">
-        {
-            projects.map((project) => (
-                <ProjectCard project={project} key={project.title} />
-            ))
-        }
+        {projects.map((project) => <ProjectCard project={project} />)}
     </div>
 </section>

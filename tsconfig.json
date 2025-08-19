@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": [
+      "@astrojs/react",
+      "@types/react",
+      "@types/react-dom",
+      "@types/node",
+      "@types/graphql",
+      "contentful"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "lib/**/*",
+    "codegen.ts",
+    "astro.config.ts",
+    "env.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
