@@ -1,13 +1,14 @@
 ---
+import type { Project } from "@/generated/graphql";
 import { getProjects } from "../../data/projects";
 import ProjectCard from "../ui/ProjectCard.astro";
 
-const projects = await getProjects();
+const projects = (await getProjects()) as Project[];
 ---
 
 <section id="projects" class="projects">
     <h2 class="section-title">Projects & Past Work</h2>
     <div class="projects-container">
-        {projects.map((project) => <ProjectCard project={project} />)}
+        {projects.map((project: Project) => <ProjectCard project={project} />)}
     </div>
 </section>

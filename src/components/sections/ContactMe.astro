@@ -1,7 +1,6 @@
 ---
-// @ts-nocheck
 import "../../styles/global.css";
-import ContactForm from "../ui/ContactForm.jsx";
+import ContactForm from "../ui/ContactForm";
 
 const github = import.meta.env.PUBLIC_GITHUB_URL;
 const linkedin = import.meta.env.PUBLIC_LINKEDIN_URL;
@@ -34,7 +33,12 @@ const phone = import.meta.env.PUBLIC_PHONE;
             </div>
 
             <!-- Static form for Netlify detection -->
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form
+                name="contact"
+                data-netlify
+                data-netlify-honeypot="bot-field"
+                hidden
+            >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
                 <textarea name="message"></textarea>
