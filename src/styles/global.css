@@ -384,7 +384,7 @@ nav {
 }
 
 .project-content {
-    overflow-y: auto;
+    overflow-y: overlay;
 }
 
 .project-details h3 {
