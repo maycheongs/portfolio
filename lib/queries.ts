@@ -1,8 +1,8 @@
 import { gql } from 'graphql-request';
 
 export const PROJECTS_QUERY = gql`
-  query Projects(order: order_DESC) {
-    projectCollection {
+  query Projects {
+    projectCollection(order: order_DESC) {
       items {
         title
         description
